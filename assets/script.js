@@ -3,6 +3,7 @@ let key;
 let message;
 let keyArray = [];
 
+/* This function is the main function for encoding messages. */
 function mainEncode(){
     if (onClickFunc()){
         generateKeyList();
@@ -10,6 +11,7 @@ function mainEncode(){
     }
 }
 
+/* This function is the main function for decoding messages. */
 function mainDecode(){
     if (onClickFunc()){
         generateKeyList();
