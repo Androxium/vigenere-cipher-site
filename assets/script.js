@@ -19,6 +19,7 @@ function mainDecode(){
     }
 }
 
+/* This function will determine the appropriate letters to decode the message. */
 function decodeMessage(){
     var keyIndex = 0;
     var returnMessage = [];
@@ -38,6 +39,7 @@ function decodeMessage(){
     return (returnMessage.join(''));
 }
 
+/* This function will set 'key' and 'message' to their respected input values. */
 function onClickFunc(){
     key = document.getElementById('key-input').value.trim().toUpperCase();
     message = document.getElementById('message-input').value.trim().toUpperCase();
@@ -49,6 +51,7 @@ function onClickFunc(){
     return (true);
 }
 
+/* This function will determine the appropriate letters to encode the message. */
 function encodeMessage(){
     var returnMessage = [];
     var keyIndex = 0;
@@ -68,6 +71,7 @@ function encodeMessage(){
     return returnMessage.join('');
 }
 
+/* This function will generate the array of scrambled letters used encode or decode the user's message. */
 function generateKeyList(){
     var iteration = key.length;
     for (i = 0; i < iteration; i++){
