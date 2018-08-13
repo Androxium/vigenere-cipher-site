@@ -3,7 +3,6 @@ let key;
 let message;
 let keyArray = [];
 
-
 function main(){
     onClickFunc();
     generateKeyList();
