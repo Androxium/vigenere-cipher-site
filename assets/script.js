@@ -21,13 +21,13 @@ function mainDecode(){
 
 /* This function will determine the appropriate letters to decode the message. */
 function decodeMessage(){
-    var keyIndex = 0;
-    var returnMessage = [];
+    let keyIndex = 0;
+    let returnMessage = [];
     for (i = 0; i < message.length; i++){
         if (keyIndex > key.length-1){
             keyIndex = 0;
         }
-        var letterIndex = keyArray[keyIndex].indexOf(message.charAt(i));
+        let letterIndex = keyArray[keyIndex].indexOf(message.charAt(i));
         if (letterIndex === -1){
             returnMessage.push(' ');
         }
@@ -53,13 +53,13 @@ function onClickFunc(){
 
 /* This function will determine the appropriate letters to encode the message. */
 function encodeMessage(){
-    var returnMessage = [];
-    var keyIndex = 0;
+    let returnMessage = [];
+    let keyIndex = 0;
     for (i = 0; i < message.length; i++){
         if (keyIndex > (key.length-1)){
             keyIndex = 0;
         }
-        var currentColumn = message.charCodeAt(i) - 65;
+        let currentColumn = message.charCodeAt(i) - 65;
         // checks to see if the letter is indeed a valid character
         if (currentColumn < 0 || currentColumn > 25){
             returnMessage.push(" ");
@@ -73,10 +73,10 @@ function encodeMessage(){
 
 /* This function will generate the array of scrambled letters used encode or decode the user's message. */
 function generateKeyList(){
-    var iteration = key.length;
+    let iteration = key.length;
     for (i = 0; i < iteration; i++){
-        var tempList = [];
-        var currentLetter = key.charCodeAt(i);
+        let tempList = [];
+        let currentLetter = key.charCodeAt(i);
         for (j = 0; j < 26; j++){
             if (currentLetter > 90){
                 currentLetter = 65;
