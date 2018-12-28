@@ -1,53 +1,48 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Vigenere Cipher</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Vigenere Cipher Website">
-    <meta name="keywords" content="Vigenere Cipher">
-    <meta autor="author" content="Thomas Cheng">
-    <link rel="stylesheet" type="text/css" media="screen" href="./assets/style.css" />
-    <script type="text/javascript" src="./assets/script.js"></script>
-</head>
-
-<body>
-    <header>
-        <div class="container">
-            <nav>
-                <ul>
-                    <li class="current"><a href="index.html">Encode</a></li>
-                    <li><a href="decode.html">Decode</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <div class="container">
-        <p id="instructions">
-            Please enter non-special characters for both the message and key text fields.
-        </p>
-
-        <p id="text-input">
-            <div class="wrapper">
-                <label>Key: </label><input type="text" id="key-input" autofocus><br/>
-            </div>
-
-            <div class="wrapper">
-                <label>Message to Encode: </label> <input type="text" id="message-input"><br/>
-            </div>
-
-            <div class="wrapper">
-                <div class="wrapper">
-                    <button onclick="mainEncode()">Encode Message</button>
-                </div>
-            </div>
-        </p>
-
-        <div class="wrapper">
-            <p>The encoded message is: </p>
-            <p id="output-message"></p>
-        </div>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Vigenere Cipher Website</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/4/yeti/bootstrap.min.css"
+    />
+    <script src="assets/script.js"></script>
+  </head>
+  <body>
+    <div class="container mt-4">
+      <h1 class="display-4 text-primary text-center">Vigenere Cipher Cite</h1>
+      <form>
+        <input
+          type="test"
+          placeholder="Key"
+          id="key-input"
+          class="form-control mt-2"
+        />
+        <textarea
+          placeholder="Message"
+          id="message-input"
+          class="form-control mt-2"
+        ></textarea>
+      </form>
+      <button onclick="mainEncode()" class="btn btn-primary btn-block mt-3">
+        Encode Message
+      </button>
+      <button onclick="mainDecode()" class="btn btn-secondary btn-block mt-3">
+        Decode Message
+      </button>
     </div>
-</body>
+    <div
+      id="output-message"
+      class="text-secondary text-center container mt-4"
+    ></div>
+  </body>
 </html>
